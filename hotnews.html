@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="favicon_io/6-square-fill.svg" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArthurNews</title>
+    <link href="css/bootstrap.min.css" / rel="stylesheet">
+    <link href="js/bootstrap.bundle.js" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        img {
+            transition: .3s;
+        }
+
+        img:hover {
+            transform: scale(0.7);
+        }
+    </style>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="index.html">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list.html">Збірка новин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotnews.html">Топ новини</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Про нас</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Увійти
+                </button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header" style="display: flex; flex-direction: column;">
+                <h4 class="modal-title">Увійти</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container mt-3">
+                    <form action="/action_page.php" class="was-validated">
+                        <div class="mb-3 mt-3">
+                            <label for="uname" class="form-label">Логін користувача:</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname"
+                                required>
+                            <div class="valid-feedback">Файно є</div>
+                            <div class="invalid-feedback">Заповніть поле будь ласка</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pwd" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                name="pswd" required>
+                            <div class="valid-feedback">Файно є</div>
+                            <div class="invalid-feedback">Заповніть поле будь ласка</div>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+                            <label class="form-check-label" for="myCheck">Я погоджую з вашою політикою</label>
+                            <div class="valid-feedback">Файно є</div>
+                            <div class="invalid-feedback">Ви змушені погодитись</div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <button type="submit" href="#main" class="btn btn-primary">Спробувати)</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрити</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+
+    <div class="mask" id="main">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 style="color: black ;">Нагарячіші новини</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="hotnews" style="margin: 2%;">
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/zuam.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Наша головна зима</h5>
+                        <p class="card-text">На півночі Харківської області на прикордонні мовить російське радіо
+                            "Жизнь".
+
+                            <br>Приблизно що п'ятнадцять хвилин попса замовкає і хрипкий голос починає переконувати
+                            слухачів
+                            "не помогать украинской армии". Ув'язує тяготи та поневіряння з самим фактом збройного
+                            опору. Запевняє, що Україна втратила вбитими 170 тисяч солдатів та закликає українців
+                            "вырваться из лап Зеленского".
+
+                            <br>Щоразу це нас дуже веселить.
+
+                            <br>Росія пішла з цього регіону так само стрімко, як і зайшла. Про її присутність нагадують
+                            лише
+                            підірвані мости, обстріли, радіо, що веде мовлення з Бєлгорода, та кинуті під час відступу
+                            шкільні підручники. Навіть за російськими законами вони вже незаконні: друкувалися влітку, а
+                            тому друкарня не встигла перефарбувати український південь у кольори російського прапора.
+
+                            <br>З першого дня війни Росія сподівалася, що зможе розколоти Україну. Вона намагалася
+                            вбивати
+                            клин між сходом та заходом. Між армією та політичним керівництвом.
+                        <p class="card-text"><small class="text-muted">Обновлено 2 дні тому</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="hotnews" style="margin: 2%;">
+        <div class="card mb-3" id="photo" style="max-width: 100%;">
+            <div class="row g-0">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Остання надія Путіна </h5>
+                        <p class="card-text">У чому запорука успіху будь-якої держави-агресора? У сильній армії? У
+                            слабких сусідах? У фанатизмі власного населення?
+
+                            <br>Історичний досвід свідчить, що є ще одна не менш важлива умова – здатність вчасно
+                            зупинитися.
+
+                            <br>Теоретично Адольф Гітлер міг задовольнитися аншлюсом Австрії та розчленуванням
+                            Чехословаччини, але не вторгатися до Польщі. І цілком можливо, що у такому разі фюреру все
+                            зійшло б з рук.
+
+                            <br>Теоретично Беніто Муссоліні міг обмежитися захопленням Ефіопії та Албанії, але не
+                            вступати в Другу світову війну. І, швидше за все, дуче не довелося б висіти головою вниз на
+                            міланській бензоколонці.
+
+                            <br>Теоретично Володимир Путін міг окупувати Крим та ОРДЛО, але не йти далі. Говоритимемо
+                            відверто: де-факто з цим були готові змиритися й західні еліти, й українська влада. Але,
+                            спробувавши завоювати решту України 2022-го, російський диктатор опинився перед перспективою
+                            втратити все – зокрема й захоплене 2014-го року.
+                            <br>Самогубний крок, зроблений 24 лютого, був лише поглиблений вересневим рішенням про
+                            "приєднання" нових територій.
+                            <br>Теоретично Кремль сподівався оточити нещодавно окуповані землі якимось сакральним
+                            ореолом: мовляв, тільки спробуйте перетнути кордон Росії! На практиці ж було досягнуто
+                            протилежного ефекту: Путін десакралізував саме поняття "російських кордонів".
+                        </p>
+                        <p class="card-text"><small class="text-muted">Обновлено 2 дні тому</small></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/pes.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="hotnews" style="margin: 2%;">
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/ANIME.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Колгосп тварин. Як Путін спілкувався з соколом та індичками, поки його
+                            армія тікала з Ізюма й Херсона</h5>
+                        <p class="card-text">22 листопада 2022-го під крижаним дощем президент РФ урочисто відкрив у
+                            Москві пам'ятник людині з сигарою. Новина, яка не варта часу, витраченого на те, щоб її
+                            прочитати. Якби не символізм.
+
+                            <br>Насправді Путін відкривав пам'ятник собі – такому, яким бачить себе в підручниках
+                            історії.
+                            Грозою світового імперіалізму та непохитним Фіделем Кастро на максималках. Мінус сигара,
+                            борода і революційна харизма. Плюс месіанство, вуглеводна та ядерна зброя.
+
+                            <br>Як і Кастро, єдине, що вдалося йому побудувати за десятиліття правління, це світ
+                            альтернативної реальності.
+
+                            <br>У цій вигаданій реальності Росія сьогодні готується до освоєння Місяця.
+
+                            <br>Санкції англосаксів зазнали фіаско, а імпортозаміщення переможно крокує країною.
+
+                            <br>Українська бабуся у валянках і "старомодном ветхом шушуне" з червоним прапором
+                            неіснуючої
+                            країни в руках ходить зустрічати з квітами російських визволителів.
+
+                            <br>Армія неухильно виконує вкрай розмиті цілі "спецоперації", що потопають у багнюці, як
+                            осінні
+                            дороги на Донеччині.
+
+                            ДОРОГИЙ БРАТ Рамзан записує, дон, чергове тікток-відео, де самотужки, дон, захоплює Київ.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Обновлено 2 дні тому</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Завантажити ще
+        </button>
+    </div>
+</body>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3 text-secondary"></i>ArthurNews
+                    </h6>
+                    <p>
+                        Ось тут має знаходитись інформація про мою компанію новин
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Навігація
+                    </h6>
+                    <p>
+                        <a class="nav-link" aria-current="page" href="#main">Головна</a>
+                    </p>
+                    <p>
+                        <a class="nav-link" href="list.html">Збірка новин</a>
+                    </p>
+                    <p>
+                        <a class="nav-link" href="hotnews.html">Топ новини</a>
+                    </p>
+                    <p>
+                        <a class="nav-link" href="about.html">Про нас</a>
+                    </p>
+                </div>
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Натхнення
+                    </h6>
+                    <p>
+                        <a href="https://etnosvit.com/uk/anekdoty_uk.html" target="_blank" class="text-reset">Анекдоти
+                            по українські </a>
+                    </p>
+                    <p>
+                        <a href="https://rutraaa.github.io/GIM/" target="_blank" class="text-reset">Лабораторні роботи
+                            1-5</a>
+                    </p>
+                    <p>
+                        <a href="https://rutraaa.github.io/Lab6/" target="_blank"
+                            class="text-reset">Лаборатона робота 6</a>
+                    </p>
+                    <p>
+                        <a target="_blank"
+                            href="https://pespatron.wordpress.com/"
+                            class="text-reset">Лаборатона робота 7</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Контакти</h6>
+                    <p><i class="fas fa-home me-3 text-secondary"></i> Львів, Лукаша 4б</p>
+                    <p>
+                        <i class="fas fa-envelope me-3 text-secondary"></i>
+                        artur.beleziak.ki.2019@lpnu.ua
+                    </p>
+                    <p><i class="fas fa-phone me-3 text-secondary"></i> +380 50 72 694 70</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://t.me/RUTRA_A" target="_blank">Arthur Beleziak</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</html>

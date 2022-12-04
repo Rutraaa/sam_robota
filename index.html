@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="favicon_io/6-square-fill.svg" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArthurNews</title>
+    <link href="css/bootstrap.min.css" / rel="stylesheet">
+    <link href="js/bootstrap.bundle.js" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/toast.js"></script>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="index.html">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list.html">Збірка новин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotnews.html">Топ новини</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Про нас</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Увійти
+                </button>
+            </form>
+        </div>
+    </nav>
+    <!-- Background image -->
+
+    <div class="p-5 text-center bg-image" style="
+        background: url(img/news.jpg) no-repeat center center fixed;
+        background-size: cover;
+      width: 100%;
+      height: 15%;
+    ">
+        <div class="mask" id="main">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">Оперативне <br>інформування людей прикладного змісу</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Background image -->
+</header>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header" style="display: flex; flex-direction: column;">
+                <h4 class="modal-title">Увійти</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container mt-3">
+                    <form action="/action_page.php" class="was-validated">
+                        <div class="mb-3 mt-3">
+                            <label for="uname" class="form-label">Логін користувача:</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname"
+                                required>
+                            <div class="valid-feedback">Файно є</div>
+                            <div class="invalid-feedback">Заповніть поле будь ласка</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pwd" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                name="pswd" required>
+                            <div class="valid-feedback">Файно є</div>
+                            <div class="invalid-feedback">Заповніть поле будь ласка</div>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+                            <label class="form-check-label" for="myCheck">Я погоджую з вашою політикою</label>
+                            <div class="valid-feedback">Файно є</div>
+                            <div class="invalid-feedback">Ви змушені погодитись</div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <button type="button" class="btn btn-primary" id="liveToastBtn">Спробувати)</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрити</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded mr-2" alt="...">
+      <strong class="mr-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+
+<body>
+    <!-- Content here -->
+
+    <div class="hotnews" style="margin: 2%;">
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row g-0">
+                <div class="col-md-8" style="    display: contents;">
+                    <div class="card-body">
+                        <h5 class="card-title">Новини — оперативне інформаційне повідомлення, яке містить суспільно важливу та актуальну інформацію, що стосується певної сфери життя суспільства загалом чи окремих його груп. В журналістиці — окремий інформаційний жанр, який характеризується стислим викладом ключової інформації щодо певної події, яка сталася нещодавно.
+
+                            На думку Е. Бойда «Цінність новини суб'єктивна. Чим більше новина впливатиме на життя споживачів новин, їхні прибутки й емоції, тим важливішою вона буде.
+                            
+                            Зазвичай, новини на телебаченні і радіо передаються кілька разів на день, починаються на початку години та тривають від двох хвилин до півгодини. Вони, зазвичай, являють собою перелік окремих новин з таких областей, як політика, економіка, наука, культура, спорт, з прогнозом погоди в кінці. Передбачається, що новини повинні бути викладені максимально нейтрально і об'єктивно, і окремо від коментарів. Вибір новин для добірки здійснюється редакцією.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center h-100" style="flex-direction: column;" id="hotnews">
+        <div class="container">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/fire.jpg" alt="PesPatron" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>У Зеленського спрогнозували, що відбуватиметься у Росії найближчим часом</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/tank.jpg" alt="PesPatron" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>Скільки німецька та французька армії могли б воювати проти РФ: експерт дав відповідь
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/zel.jpg" alt="PesPatron" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>ЗСУ мають звільнити ще близько двох тисяч населених пунктів – Зеленський
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3 text-secondary"></i>ArthurNews
+                    </h6>
+                    <p>
+                        Ось тут має знаходитись інформація про мою компанію новин
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Навігація
+                    </h6>
+                    <p>
+                        <a class="nav-link" aria-current="page" href="#main">Головна</a>
+                    </p>
+                    <p>
+                        <a class="nav-link" href="list.html">Збірка новин</a>
+                    </p>
+                    <p>
+                        <a class="nav-link" href="hotnews.html">Топ новини</a>
+                    </p>
+                    <p>
+                        <a class="nav-link" href="about.html">Про нас</a>
+                    </p>
+                </div>
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Натхнення
+                    </h6>
+                    <p>
+                        <a href="https://etnosvit.com/uk/anekdoty_uk.html" target="_blank" class="text-reset">Анекдоти
+                            по українські </a>
+                    </p>
+                    <p>
+                        <a href="https://rutraaa.github.io/GIM/" target="_blank" class="text-reset">Лабораторні роботи
+                            1-5</a>
+                    </p>
+                    <p>
+                        <a href="https://rutraaa.github.io/Lab6/" target="_blank"
+                            class="text-reset">Лаборатона робота 6</a>
+                    </p>
+                    <p>
+                        <a target="_blank"
+                            href="https://pespatron.wordpress.com/"
+                            class="text-reset">Лаборатона робота 7</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Контакти</h6>
+                    <p><i class="fas fa-home me-3 text-secondary"></i> Львів, Лукаша 4б</p>
+                    <p>
+                        <i class="fas fa-envelope me-3 text-secondary"></i>
+                        artur.beleziak.ki.2019@lpnu.ua
+                    </p>
+                    <p><i class="fas fa-phone me-3 text-secondary"></i> +380 50 72 694 70</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://t.me/RUTRA_A" target="_blank">Arthur Beleziak</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</html>
